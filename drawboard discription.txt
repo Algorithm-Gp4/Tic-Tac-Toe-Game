@@ -1,0 +1,20 @@
+The drawBoard function is responsible for displaying the current state of the Tic-Tac-Toe board to the console.
+
+ It takes a pointer to a character array (char *spaces), which represents the board's spaces, as its parameter. 
+Here's a breakdown of how it works:
+
+Formatting Output: The function uses a series of cout statements to create a visual representation of the board. 
+                   Each of the nine spaces is represented by a character from the spaces array,
+                   which can either be 'X', 'O', or a space character ' ' if that spot is unoccupied.
+
+Layout: The board is displayed in a 3x3 grid format:
+
+It begins and ends with a row of vertical bars and spaces.
+Each of the three rows contains three spaces (using the characters from the spaces array), separated by vertical bars (|).
+Horizontal lines (_____) are drawn between the rows to delineate them clearly.
+Spacing: Additional new line characters (\n) are used to provide spacing before and after the board, 
+ensuring that the output is visually distinct and easy to read.
+
+In summary,
+ the drawBoard function effectively presents the game state in a user-friendly format,
+ helping players visualize the current configuration of the game.
