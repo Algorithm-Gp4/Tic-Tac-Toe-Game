@@ -1,0 +1,31 @@
+The computermove function:
+
+The purpose of computerMove is to allow the computer to make a move by placing its marker 
+(usually 'O') in a randomly chosen empty spot on the Tic-Tac-Toe board.
+
+->Random Number Generation:
+
+The function generates a random integer between 0 and 8 using rand() % 9.
+This corresponds to the indices of the spaces array, which represents the Tic-Tac-Toe board (with indices 0 to 8 for the 9 positions).
+
+
+->Infinite Loop:
+
+The function enters an infinite loop (while (true)) to continuously attempt to place a marker until it finds an empty space.
+Check for Empty Space:
+
+Inside the loop, it checks if the randomly selected position (spaces[number]) is empty (i.e., it contains a space character ' ').
+
+
+->Place the Marker:
+
+If the selected space is empty, it places the computer's marker (the character passed as the computer parameter, typically 'O')
+ in that space.
+
+->Exit the Loop:
+
+After successfully placing the marker, the break statement is executed,
+ which exits the loop, allowing the game to continue with the next turn.
+Summary:
+In summary, the computerMove function allows the computer to make a move in the Tic-Tac-Toe game by randomly selecting an empty spot on the board and placing its marker there. 
+The function ensures that the computer does not overwrite any existing markers by checking for empty spaces before placing its marker.
