@@ -1,0 +1,48 @@
+Explanation on playerMove function:
+
+Steps;
+
+-> Prompting the Player for Input:
+
+The function starts by prompting the player to enter a number between 1 and 9. 
+Each number corresponds to a specific cell on the board:
+
+1 | 2 | 3
+---------
+4 | 5 | 6
+---------
+7 | 8 | 9
+
+This is a 1-based system, so the player enters numbers as shown above.
+
+
+->Convert to Zero-Based Indexing:
+
+number--; adjusts the player's input to work with zero-based indexing used in the spaces array.
+For example, if the player enters 1, number becomes 0, which refers to the first element of the spaces array.
+
+
+->Check if the Chosen Cell is Available:
+
+The function checks if the chosen cell (i.e., spaces[number]) is empty (' ').
+If it is empty, the player's marker (player, typically 'X') is placed in that cell by assigning spaces[number] = player;.
+The function then breaks out of the loop, ending the move.
+
+
+->Loop Until a Valid Move is Made:
+
+If the chosen cell is already occupied (i.e., it contains an 'X' or 'O'), the loop continues, prompting the player to enter another number until they choose an empty cell.
+
+
+-> Purpose and Usage
+The playerMove function ensures that the player:
+
+-Selects a valid cell on the board.
+-Cannot overwrite an existing marker.
+-This prevents invalid moves and guarantees that each move is registered only in an empty spot. The function is called in the main game loop after displaying the current board, allowing the player to choose their move based on the current board state.
+
+
+
+
+
+
