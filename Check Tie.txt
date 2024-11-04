@@ -1,0 +1,23 @@
+The CheckTie function:
+
+The checkTie function in your Tic-Tac-Toe program is designed to determine if the game has resulted in a tie (or draw). 
+Here’s how it works, step by step:
+
+Purpose: The function checks if all the spaces on the board are filled without any player winning, which indicates a tie.
+
+Loop Through Spaces: It uses a for loop that iterates through all the indices of the spaces array (which represents the Tic-Tac-Toe board). The array has 9 elements, each representing a cell on the board.
+
+- Check for Empty Spaces:
+
+Inside the loop, it checks if any of the spaces are still empty (i.e., if the space at index i is equal to ' ').
+If it finds any empty space, it immediately returns false, indicating that the game is not yet a tie because there are still available moves.
+All Spaces Filled: If the loop completes and finds no empty spaces (i.e., all spaces are filled), it means the game cannot continue. At this point:
+
+It prints "IT'S A TIE!\n" to inform the players of the result.
+It then returns true to indicate that the game ended in a tie.
+Here’s the relevant code for the checkTie function:
+
+Summary:
+->The function checks all board spaces.
+->If it finds an empty space, it returns false.
+->If all spaces are filled and no winner has been declared, it prints a tie message and returns true.
