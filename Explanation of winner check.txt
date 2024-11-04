@@ -1,0 +1,45 @@
+This function checks all possible winning combinations and prints the result based on the current state of the board.
+
+Some of the Parameters are:
+spaces: A pointer to an array of characters that represents the Tic-Tac-Toe board (9 elements).
+player: The character representing the player (usually 'X').
+computer: The character representing the computer (usually 'O').
+
+Logic Breakdown
+The function checks each possible winning condition in a sequence of if-else statements. Here’s how it works:
+
+Winning Combinations: There are eight possible ways to win:
+
+Rows:
+Row 1: spaces[0], spaces[1], spaces[2]
+Row 2: spaces[3], spaces[4], spaces[5]
+Row 3: spaces[6], spaces[7], spaces[8]
+Columns:
+Column 1: spaces[0], spaces[3], spaces[6]
+Column 2: spaces[1], spaces[4], spaces[7]
+Column 3: spaces[2], spaces[5], spaces[8]
+Diagonals:
+Diagonal 1: spaces[0], spaces[4], spaces[8]
+Diagonal 2: spaces[2], spaces[4], spaces[6]
+Checking Conditions:
+
+Each condition checks if the first space in a combination is not empty (' ') to ensure that a potential win is valid.
+If the condition is met, it checks if all spaces in that combination are equal.
+It uses the ternary operator (? :) to print "YOU WIN!" if the player has won or "YOU LOSE!" if the computer has won.
+
+Specific Conditions
+
+What It Does: Checks if spaces 0, 1, and 2 form a winning combination. If they do, it evaluates who the winner is.
+Return Values
+If a winning condition is met, the function does not return a value immediately; instead, it prints the result and falls through to the end.
+If no winning conditions are satisfied, it reaches the else statement, which returns false, indicating that no winner has been found yet.
+
+Finally,
+The checkWinner function effectively encapsulates the logic for determining the winner by:
+Checking all winning combinations on the board.
+Printing out the result based on the character in the winning spots.
+Returning a boolean value to indicate whether the game has been won or not.
+
+Possible Improvements
+Reduce Redundancy: The current implementation has a lot of repetitive code. Instead of separate if-else statements, you could use an array of winning combinations and iterate through them.
+Clearer Return Logic: Currently, the function prints the win/loss messages directly. You could modify it to return a value indicating the winner (or NONE for no winner) and handle the printing in the main game loop for better separation of concerns.
